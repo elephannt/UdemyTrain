@@ -6,16 +6,14 @@ import (
 )
 
 func main() {
-	var name string
-	fmt.Print("Ingresa nombre: ")
-	fmt.Scan(&name)
+	str := "Hello"
 	count := 0
-	for len(name) > 0 {
-		r, size := utf8.DecodeLastRuneInString(name)
+	for len(str) > 0 {
+		r, size := utf8.DecodeLastRuneInString(str)
 		count++
 		fmt.Printf("%c %v\n", r, size)
 
-		name = name[:len(name)-size]
+		str = str[:len(str)-size]
 	}
 	fmt.Println("count:",count)
 }
