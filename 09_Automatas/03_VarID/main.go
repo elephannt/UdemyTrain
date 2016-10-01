@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"regexp"
 )
-
+//y termine con numero o letra, y al final tenga un "@" para correo.
 func main() {
 	// Compile the expression once, usually at init time.
 	// Use raw strings to avoid having to quote the backslashes.
@@ -21,4 +21,3 @@ func main() {
 //var validID = regexp.MustCompile(`^[a-z]+[0-9]+$`) indentifica una palabra seguida de un numero.
 //var validID = regexp.MustCompile(`^[a-z]+\[[0-9]+\]$`)
 //var validID = regexp.MustCompile(`^[0-9]|[a-z]+[0-9]+[@]+$`) identifica una palabra que empiece con numero o letra
-//y termine con numero o letra, y al final tenga un "@" para correo.
