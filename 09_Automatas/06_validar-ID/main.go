@@ -11,16 +11,16 @@ func validateNUM(num string) bool {
 	//Re := regexp.MustCompile(`^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,4}$`)
 }
 func main() {
-	num := "KLSDK33"
+	num := "marco1"
 	if !validateNUM(num) {
 		fmt.Println("Number is invalid")
 	} else {
-		fmt.Println("Number is VALID")
+		fmt.Println("Number is valid")
 	}
-	num = "33A"
+	num = "marco1"
 	if !validateNUM(num) {
 		fmt.Println("Number is invalid")
 	} else {
-		fmt.Println("Number is VALID")
+		fmt.Println("Number is valid")
 	}
 }

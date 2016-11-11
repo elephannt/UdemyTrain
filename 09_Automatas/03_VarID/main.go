@@ -8,12 +8,12 @@ import (
 func main() {
 	// Compile the expression once, usually at init time.
 	// Use raw strings to avoid having to quote the backslashes.
-	var validID = regexp.MustCompile(`^[a-z]+[0-9]+$`)
+	var validID = regexp.MustCompile(`^[a-zA-Z][0-9a-zA-Z]+$`)
 
 	//ValidID = valida una palabra que termine un numero, si empieza con letra no compila.
-	fmt.Println(validID.MatchString("1marco1@"))
-	fmt.Println(validID.MatchString("1ksksks"))
-	fmt.Println(validID.MatchString("1e1"))
+	fmt.Println(validID.MatchString("marco1223a2"))
+	fmt.Println(validID.MatchString("ksksks"))
+	fmt.Println(validID.MatchString("le1"))
 
 
 }

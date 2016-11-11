@@ -20,7 +20,7 @@ func main() {
 	} else {
 		fmt.Println("URL address is VALID")
 	}
-	url = "www.google"
+	url = "wwww.google.com"
 	if !validateURL(url) {
 		fmt.Println("URL address is invalid")
 	} else {
