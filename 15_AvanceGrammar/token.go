@@ -17,7 +17,7 @@ type GoifStatement struct {
 }
 // Token represents a lexical token.
 type Token int
-
+//adding
 const (
 	// Special tokens
 	ILLEGAL Token = iota
