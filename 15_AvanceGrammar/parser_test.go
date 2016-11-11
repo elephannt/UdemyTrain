@@ -14,11 +14,7 @@ import (
 func TestParser_ParseStatement(t *testing.T) {
 	f, _ := ioutil.ReadFile("C://Download//Pokemon//gramatic.txt")
 	r := string(f[:])
-	var tests1 = []struct {
-		s    string
-		stmt *sql.SelectStatement
-		err  string
-	}{}
+
 	var tests = []struct {
 		s    string
 		stmt *sql.SelectStatement
