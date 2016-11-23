@@ -106,7 +106,7 @@ L:
 	g.Print("Enter a valid command: ")
 	fmt.Scan(&menu)
 
-	f, _ := ioutil.ReadFile("C://Download//Pokemon//bonifaz.txt")
+	f, _ := ioutil.ReadFile("C://Download//Pokemon//bonifaz1.txt")
 	s := string(f[:])
 	//r := strings.NewReplacer("{", " { ", "}", " } ", "(", " ( ", ")", " ) ", "+", " + ", "=", " = ", ".", " . ", "[", " ] ", "-", " - ", "*", " * ", "/", " / ", "++", " ++ ", "--", " -- ", "==", " == ", "<", " < ", ">", " > ", ">=", " >= ", "<=", " <= ")
 	//z := r.Replace(s)
