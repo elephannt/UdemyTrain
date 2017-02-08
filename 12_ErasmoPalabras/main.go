@@ -30,43 +30,43 @@ func validateDigits(digits string) bool {
 /*DE AQUI PARA ABAJO EMPEZAMOS CON LAS PALABRAS RESERVADAS.*/
 
 func validateCiclos(abs string) bool {
-	re := regexp.MustCompile(`(^goif$)|(^goelse$)|(^gofor$)|(^goforeach$)|(^gowhile$)|(^godo$)|(^goswitch$)+$`)
+	re := regexp.MustCompile(`(^goif:$)|(^goelse:$)|(^gofor:$)|(^goforeach:$)|(^gowhile:$)|(^godo:$)|(^goswitch:$)+$`)
 	return re.MatchString(abs)
 }
 func validateEnterosConSigno(enteros string) bool {
-	re := regexp.MustCompile(`(^gosbyte$)|(^goint32$)|(^goint16$)|(^goint64)+$`)
+	re := regexp.MustCompile(`(^gosbyte:$)|(^goint32:$)|(^goint16:$)|(^goint64:)+$`)
 	return re.MatchString(enteros)
 }
 func validateEnterosSinSigno(enteros string) bool {
-	re := regexp.MustCompile(`(^gobyte$)|(^gouint32$)|(^gouint16$)|(^gouint64$)+$`)
+	re := regexp.MustCompile(`(^gobyte:$)|(^gouint32:$)|(^gouint16:$)|(^gouint64:$)+$`)
 	return re.MatchString(enteros)
 }
 func validateFlotSimple(flot string) bool {
-	re := regexp.MustCompile(`(^gofloat16$)|(^gofloat32$)|(^gofloat64)+$`)
+	re := regexp.MustCompile(`(^gofloat16:$)|(^gofloat32:$)|(^gofloat64:$)+$`)
 	return re.MatchString(flot)
 }
 func validateFlotDoble(doble string) bool {
-	re := regexp.MustCompile(`(^godouble$)+$`)
+	re := regexp.MustCompile(`(^godouble:$)+$`)
 	return re.MatchString(doble)
 }
 func validateUnicodeChar(char string) bool {
-	re := regexp.MustCompile(`(^gochar$)|(^gochar16$)|(^gochar32$)|(^gochar64$)+$`)
+	re := regexp.MustCompile(`(^gochar:$)|(^gochar16:$)|(^gochar32:$)|(^gochar64:$)+$`)
 	return re.MatchString(char)
 }
 func validateBoleanoLogic(bol string) bool {
-	re := regexp.MustCompile(`(^gobool$)+$`)
+	re := regexp.MustCompile(`(^gobool:$)+$`)
 	return re.MatchString(bol)
 }
 func validateObject(obj string) bool {
-	re := regexp.MustCompile(`(^goobject$)+$`)
+	re := regexp.MustCompile(`(^goobject:$)+$`)
 	return re.MatchString(obj)
 }
 func validateSecChar(sec string) bool {
-	re := regexp.MustCompile(`(^gostring$)+$`)
+	re := regexp.MustCompile(`(^gostring:$)+$`)
 	return re.MatchString(sec)
 }
 func validateDeci(dec string) bool {
-	re := regexp.MustCompile(`(^godecimal$)+$`)
+	re := regexp.MustCompile(`(^godecimal:$)+$`)
 	return re.MatchString(dec)
 }
 func validateOperadores(op string) bool {
@@ -74,72 +74,72 @@ func validateOperadores(op string) bool {
 	return re.MatchString(op)
 }
 func validateModAcceso(mod string) bool {
-	re := regexp.MustCompile(`(^gounion$)|(^gonative$)|(^gosigned$)|(^goregister$)|(^gounsigned$)|(^gonative$)|(^goabstract$)|(^goasync$)|(^goconst$)|(^goevent$)|(^goextern$)|(^goin$)|(^goout$)|(^gooverride$)|(^goreadonly$)|(^goseal$)|(^gostatic$)|(^govirtual$)|(^govolatile$)+$`)
+	re := regexp.MustCompile(`(^gounion:$)|(^gonative:$)|(^gosigned:$)|(^goregister:$)|(^gounsigned:$)|(^gonative:$)|(^goabstract:$)|(^goasync:$)|(^goconst:$)|(^goevent:$)|(^goextern:$)|(^goin:$)|(^goout:$)|(^gooverride:$)|(^goreadonly:$)|(^goseal:$)|(^gostatic:$)|(^govirtual:$)|(^govolatile:$)+$`)
 	return re.MatchString(mod)
 }
 func validateInstDeAlto(inst string) bool {
-	re := regexp.MustCompile(`(^gobreak$)|(^gocontinue$)|(^gogoto$)|(^goreturn$)+$`)
+	re := regexp.MustCompile(`(^gobreak:$)|(^gocontinue:$)|(^gogoto:$)|(^goreturn:$)+$`)
 	return re.MatchString(inst)
 }
 func validateTipDeDtsGral(dat string) bool {
-	re := regexp.MustCompile(`(^golong$)|(^goshort$)|(^gostruct$)|(^gouint$)|(^goulong$)|(^goushort$)+$`)
+	re := regexp.MustCompile(`(^golong:$)|(^goshort:$)|(^gostruct:$)|(^gouint:$)|(^goulong:$)|(^goushort:$)+$`)
 	return re.MatchString(dat)
 }
 func validateExecpciones(exc string) bool {
-	re := regexp.MustCompile(`(^gothrows$)|(^gothrow$)|(^gotry$)|(^gocatch$)|(^gotry$)|(^gofinally$)|(^gotry$)|(^gocatch$)|(^goexcept$)|(^goraise$)|(^goassert$)+$`)
+	re := regexp.MustCompile(`(^gothrows:$)|(^gothrow:$)|(^gotry:$)|(^gocatch:$)|(^gotry:$)|(^gofinally:$)|(^gotry:$)|(^gocatch:$)|(^goexcept:$)|(^goraise:$)|(^goassert:$)+$`)
 	return re.MatchString(exc)
 }
 func validateAccesibilidad(acc string) bool {
-	re := regexp.MustCompile(`(^gointernal$)|(^goprivate$)|(^goprotected$)|(^gopublic$)|(^gointer$)+$`)
+	re := regexp.MustCompile(`(^gointernal:$)|(^goprivate:$)|(^goprotected:$)|(^gopublic:$)|(^gointer:$)+$`)
 	return re.MatchString(acc)
 }
 func validateSpacName(spc string) bool {
-	re := regexp.MustCompile(`(^gonamespace$)|(^gousing$)|(^goexternalias$)|(^goimport$)|(^gofrom$)|(^golambda$)+$`)
+	re := regexp.MustCompile(`(^gonamespace:$)|(^gousing:$)|(^goexternalias:$)|(^goimport:$)|(^gofrom:$)|(^golambda:$)+$`)
 	return re.MatchString(spc)
 }
 func validateConver(cnv string) bool {
-	re := regexp.MustCompile(`(^goexplicit$)|(^goimplicit$)|(^gooperator$)+$`)
+	re := regexp.MustCompile(`(^goexplicit:$)|(^goimplicit:$)|(^gooperator:$)+$`)
 	return re.MatchString(cnv)
 }
 
 func validateParM(prm string) bool {
-	re := regexp.MustCompile(`(^goparams$)|(^goref$)|(^goout$)|(^gorefout$)|(^gosuper$)|(^gosynch$)+$`)
+	re := regexp.MustCompile(`(^goparams:$)|(^goref:$)|(^goout:$)|(^gorefout:$)|(^gosuper:$)|(^gosynch:$)+$`)
 	return re.MatchString(prm)
 }
 func validateClavAc(clva string) bool {
-	re := regexp.MustCompile(`(^gobase$)|(^gothis$)|(^gothese$)|(^gothem$)|(^gothey$)+$`)
+	re := regexp.MustCompile(`(^gobase:$)|(^gothis:$)|(^gothese:$)|(^gothem:$)|(^gothey:$)+$`)
 	return re.MatchString(clva)
 }
 func validateClavOP(clvo string) bool {
-	re := regexp.MustCompile(`(^goas$)|(^goawait$)|(^gois$)|(^gonew$)|(^gosizeof$)|(^gotypeof$)|(^gotrue$)|(^gofalse$)|(^gostackalloc$)|(^gonameof)|(^goinstanceof$)+$`)
+	re := regexp.MustCompile(`(^goas:$)|(^goawait:$)|(^gois:$)|(^gonew:$)|(^gosizeof:$)|(^gotypeof:$)|(^gotrue:$)|(^gofalse:$)|(^gostackalloc:$)|(^gonameof:$)|(^goinstanceof:$)+$`)
 	return re.MatchString(clvo)
 }
 func validateTipRef(tpf string) bool {
-	re := regexp.MustCompile(`(^govoid$)|(^govar$)+$`)
+	re := regexp.MustCompile(`(^govoid:$)|(^govar:$)+$`)
 	return re.MatchString(tpf)
 }
 func validateClvIns(clvin string) bool {
-	re := regexp.MustCompile(`(^gofixed$)|(^golock$)|(^gointerface$)+$`)
+	re := regexp.MustCompile(`(^gofixed:$)|(^golock:$)|(^gointerface:$)+$`)
 	return re.MatchString(clvin)
 }
 func validateTipRef2(clvio string) bool {
-	re := regexp.MustCompile(`(^goclass$)|(^godelegate$)|(^godynamic$)|(^gointerface$)+$`)
+	re := regexp.MustCompile(`(^goclass:$)|(^godelegate:$)|(^godynamic:$)|(^gointerface:$)+$`)
 	return re.MatchString(clvio)
 }
 func validateClvLite(lite string) bool {
-	re := regexp.MustCompile(`(^gonull$)|(^godefault$)+$`)
+	re := regexp.MustCompile(`(^gonull:$)|(^godefault:$)+$`)
 	return re.MatchString(lite)
 }
 func validateClvConx(convx string) bool {
-	re := regexp.MustCompile(`(^gopackage$)|(^goadd$)|(^godynamic$)|(^goglobal$)|(^gojoin$)|(^gopartial$)|(^goselect$)|(^govar$)|(^goyield$)|(^golet$)|(^goremove$)|(^gononlocal$)|(^goprint$)|(^goprintline$) |(^goprintint$)|(^goprintdouble$)|(^goprintbool$)|(^goprintchar$)|(^goprintstring$)|(^goimplements$)+$`)
+	re := regexp.MustCompile(`(^gopackage:$)|(^goadd:$)|(^godynamic:$)|(^goglobal:$)|(^gojoin:$)|(^gopartial:$)|(^goselect:$)|(^govar:$)|(^goyield:$)|(^golet:$)|(^goremove:$)|(^gononlocal:$)|(^goprint:$)|(^goprintline:$) |(^goprintint:$)|(^goprintdouble:$)|(^goprintbool:$)|(^goprintchar:$)|(^goprintstring:$)|(^goimplements:$)+$`)
 	return re.MatchString(convx)
 }
 func validateOpLog(logx string) bool {
-	re := regexp.MustCompile(`(^goall$)|(^goany$)|(^gobetween$)|(^goexists$)|(^golike$)|(^gosome$)|(^goand$)|(^goor$)|(^gonot$)|(^goxand$)|(^goxor$)|(^goxnot$)+$`)
+	re := regexp.MustCompile(`(^goall:$)|(^goany:$)|(^gobetween:$)|(^goexists:$)|(^golike:$)|(^gosome:$)|(^goand:$)|(^goor:$)|(^gonot:$)|(^goxand:$)|(^goxor:$)|(^goxnot:$)+$`)
 	return re.MatchString(logx)
 }
 func validateMath(math string) bool {
-	re := regexp.MustCompile(`(^gotan$)|(^gosin$)|(^gocos$)|(^gopi$)+$`)
+	re := regexp.MustCompile(`(^gotan:$)|(^gosin:$)|(^gocos:$)|(^gopi:$)+$`)
 	return re.MatchString(math)
 }
 func validateOprel(rel string) bool {
@@ -147,15 +147,15 @@ func validateOprel(rel string) bool {
 	return re.MatchString(rel)
 }
 func validateCMDctrl(cctrl string) bool {
-	re := regexp.MustCompile(`(^gocheckpoint$)|(^gokill$)|(^goreconfigure$)|(^goshutdown$)|(^gokillstatsjob$)+$`)
+	re := regexp.MustCompile(`(^gocheckpoint:$)|(^gokill:$)|(^goreconfigure:$)|(^goshutdown:$)|(^gokillstatsjob:$)+$`)
 	return re.MatchString(cctrl)
 }
 func validateSecStat(stst string) bool {
-	re := regexp.MustCompile(`(^goaddsignature$)|(^goclosemasterkey$)|(^godeny$)|(^goexecuteas$)|(^gogrant$)|(^goopenmasterkey$)|(^gorevert$)|(^gorevoke$)|(^gosetuser$)|(^goazure$)+$`)
+	re := regexp.MustCompile(`(^goaddsignature:$)|(^goclosemasterkey:$)|(^godeny:$)|(^goexecuteas:$)|(^gogrant:$)|(^goopenmasterkey:$)|(^gorevert:$)|(^gorevoke:$)|(^gosetuser:$)|(^goazure:$)+$`)
 	return re.MatchString(stst)
 }
 func validateFuncOBD(obd string) bool {
-	re := regexp.MustCompile(`(^goabsolute$)|(^goaction$)|(^goada$)|(^goallocate$)|(^goalter$)|(^goare$)|(^goasc$)|(^goat$)|(^goavg$)|(^gobegin$)|(^gobit$)|(^goforeign$)|(^gofortran$)|(^gofound$)|(^gofull$)|(^gogrant$)+$`)
+	re := regexp.MustCompile(`(^goabsolute:$)|(^goaction:$)|(^goada:$)|(^goallocate:$)|(^goalter:$)|(^goare:$)|(^goasc:$)|(^goat:$)|(^goavg:$)|(^gobegin:$)|(^gobit:$)|(^goforeign:$)|(^gofortran:$)|(^gofound:$)|(^gofull:$)|(^gogrant:$)+$`)
 	return re.MatchString(obd)
 }
 func validateID(id string) bool {
@@ -187,7 +187,7 @@ func main() {
                    ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═════╝
 
     `)
-	L:
+L:
 	g.Println("WELCOME to the commands menu.\n")
 	e.Print("               in   =    ")
 	g.Println("it will run the program.")
@@ -198,12 +198,13 @@ func main() {
 	g.Print("Enter a valid command: ")
 	fmt.Scan(&menu)
 
-	f, _ := ioutil.ReadFile("C://Download//Pokemon//pokemon.txt")
+	f, _ := ioutil.ReadFile("C://Download//Erasmo.txt")
 	s := string(f[:])
-	r := strings.NewReplacer("{"," { ", "}"," } ", "("," ( ",")"," ) ","+"," + ","="," = ","."," . ","["," ] ","-"," - ","*"," * ","/"," / ","++"," ++ ","--"," -- ","=="," == ","<"," < ",">"," > ",">="," >= ","<="," <= ")
+	r := strings.NewReplacer("{", " { ", "}", " } ", "(", " ( ", ")", " ) ", "+", " + ", "=", " = ", ".", " . ", "[", " ] ", "-", " - ", "*", " * ", "/", " / ", "++", " ++ ", "--", " -- ", "==", " == ", "<", " < ", ">", " > ", ">=", " >= ", "<=", " <= ")
 	z := r.Replace(s)
 
-	line:=strings.Fields(z)
+	line := strings.Fields(z)
+
 	if menu == "in" {
 		for i := range line {
 
@@ -325,11 +326,12 @@ func main() {
 
 			}
 			color.Unset()
+
 		}
 
 	} else if menu == "man" {
 		/*si es posible abrir el doc de word directo*/
-		b, _ := ioutil.ReadFile("C://Download//Pokemon//menu.txt") // just pass the file name
+		b, _ := ioutil.ReadFile("C://Download//menu.txt") // just pass the file name
 		g.Println(string(b))
 
 	} else if menu == "quit" {
@@ -341,4 +343,6 @@ func main() {
 	fmt.Println("\n")
 	contador = 1
 	goto L
+
+
 }
