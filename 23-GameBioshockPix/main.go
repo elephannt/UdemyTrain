@@ -137,7 +137,7 @@ func (c *ControlSystem) Update(dt float32) {
 		speed := engo.GameWidth() * dt
 
 		//Esto es para los movimientos.
-4
+
 		vert := engo.Input.Axis(e.ControlComponent.Scheme)
 		e.SpaceComponent.Position.Y += speed * vert.Value()
 

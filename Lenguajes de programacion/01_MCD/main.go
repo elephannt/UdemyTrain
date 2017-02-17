@@ -29,6 +29,7 @@ func main() {
 }
 
 //Funccion para impementar el algoritmo de Euclid Algo
+
 func gcd(x, y int) int {
 	for y != 0 {
 		x, y = y, x%y
